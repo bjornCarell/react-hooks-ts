@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import { LocalStorage } from './components/UseHooks/LocalStorage';
+import { Box } from './components/UseHooks/UseMedia';
 
 function App(): JSX.Element {
   return (
@@ -11,6 +12,7 @@ function App(): JSX.Element {
       </div>
       <div>
         <LocalStorage />
+        <Box />
       </div>
     </div>
   );

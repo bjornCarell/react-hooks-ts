@@ -6,7 +6,7 @@ export const useMedia = (query: string, initState = false): boolean => {
   useDebugValue(`query: ${query}; state: ${state}`);
 
   useEffect(() => {
-    let mounted = false;
+    let mounted = true;
     const mql = window.matchMedia(query);
 
     function onChange(): void {
@@ -15,12 +15,13 @@ export const useMedia = (query: string, initState = false): boolean => {
       }
       setState(Boolean(mql.matches));
     }
-    mql.addEventListener('onResize', onChange);
+
+    mql.addEventListener('change', onChange);
     setState(mql.matches);
 
     return () => {
       mounted = false;
-      mql.removeEventListener('onResize', onChange);
+      mql.removeEventListener('change', onChange);
     };
   }, [query]);
 
