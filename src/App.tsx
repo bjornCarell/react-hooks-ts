@@ -3,6 +3,7 @@ import './App.css';
 import { HookPresenter } from './components/HookPresenter/HookPresenter';
 import { UseLocalStorage } from './components/UseHooks/UseLocalStorage';
 import { UseMedia } from './components/UseHooks/UseMedia';
+import { UseAsync } from './components/UseHooks/UseAsync';
 
 function App(): JSX.Element {
   return (
@@ -17,6 +18,9 @@ function App(): JSX.Element {
           ComponentWithHook={UseLocalStorage}
         />
         <HookPresenter heading="useMedia" ComponentWithHook={UseMedia} />
+      </div>
+      <div>
+        <HookPresenter heading="useAsync" ComponentWithHook={UseAsync} />
       </div>
     </div>
   );
