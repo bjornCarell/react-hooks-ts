@@ -1,9 +1,4 @@
-import React, {
-  Children,
-  createContext,
-  ReactChildren,
-  useReducer,
-} from 'react';
+import React, { createContext, useReducer } from 'react';
 import { useThisContext } from '../../hooks/useThisContext/useThisContext';
 
 type State = { count: number };

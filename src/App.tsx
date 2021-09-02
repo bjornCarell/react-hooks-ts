@@ -1,4 +1,4 @@
-import React, { Children } from 'react';
+import React from 'react';
 import './App.css';
 import { HookPresenter } from './components/HookPresenter/HookPresenter';
 import { UseLocalStorage } from './components/UseHooks/UseLocalStorage';
