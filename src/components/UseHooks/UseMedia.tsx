@@ -23,5 +23,10 @@ export const UseMedia = (): JSX.Element => {
     color = 'orange';
   }
 
-  return <div style={{ width: 200, height: 200, backgroundColor: color }} />;
+  return (
+    <div>
+      <p>Resize the window</p>
+      <div style={{ width: 200, height: 200, backgroundColor: color }} />
+    </div>
+  );
 };
